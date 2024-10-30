@@ -1,0 +1,8 @@
+{
+  "name": "Couteau",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite",
+  "id": "ca8a086c"
+}
