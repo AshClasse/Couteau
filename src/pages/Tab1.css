@@ -1,0 +1,166 @@
+
+.tab1-content {
+	--background: radial-gradient(circle, rgba(241,248,217,1) 7%, rgba(146,208,51,1) 88%);
+}
+  
+
+/* Hero Section */
+.hero-section {
+	width: 100%;
+	height: 25vh;
+	overflow: hidden;
+	position: relative;
+  }
+  
+  .hero-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+  }
+
+  .video-header {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 10px 20px;
+  }
+
+  .swiper .swiper-slide img {
+    width: 60px;
+    max-width: 60px;
+    height: auto;
+    max-height: 100%;
+	margin-right: 10px;
+}
+  
+  .video-title {
+	font-family: 'GleeFont', sans-serif;
+	font-size: 1em;
+	color: var(--ion-color-primary);
+	margin: 0;
+  }
+  
+  .video-description {
+	text-align: left;
+  }
+  
+  .video-description p {
+	color: #666;
+	font-size: 0.7em;
+	margin: 0;
+  }
+
+  /* Slider Container */
+  .slider-container {
+	margin-top: 10px;
+  }
+  
+  .video-swiper {
+	height: 100%;
+	width: 85%;
+  }
+
+  .video-slide {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 20px; /* Espacio al final del slide */
+	background: rgba(255, 255, 255, 0.95); /* Mismo color de fondo que los cards */
+	border-radius: 15px; /* Bordes redondeados */
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+	/* Sombra similar a los cards */
+  }
+
+  
+  .slider-video {
+	width: 90%;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 15px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	margin-bottom: 15px;
+  }
+  
+  /* Ajuste de la paginación */
+  .swiper-pagination {
+	bottom: 5px !important; /* Más espacio para los bullets */
+  }
+  
+  .swiper-pagination-bullet {
+	width: 10px !important;
+	height: 10px !important;
+	margin: 0 6px !important;
+	background: white !important;
+	opacity: 0.7;
+  }
+  
+  .swiper-pagination-bullet-active {
+	background: var(--ion-color-primary) !important;
+	opacity: 1;
+  }
+  /* Texto del video */
+.video-text {
+	text-align: center;
+	margin: 15px;
+	padding-bottom: 40px; /* Más espacio arriba del texto para los bullets */
+  }
+  
+  .video-text h2 {
+	font-family: 'GleeFont', sans-serif;
+	font-size: 1.25em;
+	color: var(--ion-color-dark);
+	margin: 0;
+	margin-bottom: 8px;
+  }
+
+  
+  /* Navegación del Swiper */
+  .swiper-button-next,
+  .swiper-button-prev {
+	color: var(--ion-color-primary) !important;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+	.logo-image {
+	  width: 100px; /* Logo más pequeño en móviles */
+	}
+  
+	.slider-video {
+	  height: 250px; /* Altura fija más pequeña para móviles */
+	}
+  
+	.video-text {
+	  margin: 25px 10px 10px 10px;
+	}
+  
+	.video-text h2 {
+	  font-size: 1.2em;
+	}
+  
+	.video-text p {
+	  font-size: 0.9em;
+	}
+  
+	.swiper-pagination {
+	  bottom: 60px !important; /* Ajuste para móviles */
+	}
+  }
+  
+  /* Animaciones */
+  .video-slide {
+	animation: fadeIn 0.5s ease-in;
+  }
+  
+  @keyframes fadeIn {
+	from {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }

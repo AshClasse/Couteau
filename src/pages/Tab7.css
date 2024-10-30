@@ -1,0 +1,190 @@
+/* Tab7.css */
+.tab7-content {
+    --background: radial-gradient(circle, rgba(255,223,223,1) 5%, rgba(255,82,82,1) 88%);
+  }
+  
+  .game-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .game-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .game-header h2 {
+    font-family: 'GleeFont', sans-serif;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .game-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .game-stats span {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    perspective: 1000px;
+  }
+  
+  .memory-card {
+    aspect-ratio: 3/4;
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .memory-card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .memory-card.matched {
+    animation: pulse 0.5s;
+  }
+  
+  /* Tab7.css (continuación) */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+    background: #f8f8f8;
+  }
+  
+  .card-front img,
+  .card-back img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .character-name {
+    margin-top: 10px;
+    font-family: 'GleeFont', sans-serif;
+    color: #229555;
+    font-size: 1.1em;
+    text-align: center;
+  }
+  
+  .win-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+    z-index: 1000;
+    animation: fadeIn 0.5s;
+  }
+  
+  .win-message h2 {
+    color: #229555;
+    font-family: 'GleeFont', sans-serif;
+    margin-bottom: 15px;
+  }
+  
+  .win-message p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1) rotateY(180deg);
+    }
+    50% {
+      transform: scale(1.1) rotateY(180deg);
+    }
+    100% {
+      transform: scale(1) rotateY(180deg);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .cards-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+    }
+  
+    .character-name {
+      font-size: 0.9em;
+    }
+  
+    .game-header h2 {
+      font-size: 1.5em;
+    }
+  
+    .game-stats span {
+      font-size: 1em;
+    }
+  
+    .win-message {
+      width: 90%;
+      max-width: 300px;
+      padding: 20px;
+    }
+  }
+  
+  /* Hover effects */
+  .memory-card:not(.flipped):not(.matched):hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+  }
+  
+  .memory-card:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+  }

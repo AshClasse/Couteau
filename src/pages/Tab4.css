@@ -1,0 +1,65 @@
+.tab4-content {
+    --background: radial-gradient(circle, rgba(255,241,204,1) 5%, rgba(255,196,30,1) 88%);
+}
+
+  ion-card {
+    margin: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  ion-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  ion-card-title {
+    font-family: 'GleeFont', sans-serif;
+    font-size: 1.5em;
+    color: #229555;
+  }
+  
+  ion-card-subtitle {
+    font-size: 1.1em;
+    color: #64d396;
+  }
+  
+  ion-card-content {
+    padding: 16px;
+  }
+  
+  ion-card-content ul {
+    padding-left: 20px;
+    margin: 10px 0;
+  }
+  
+  ion-card-content li {
+    margin: 8px 0;
+    color: #333;
+  }
+  
+  ion-item {
+    --background: transparent;
+  }
+  
+  ion-item h2 {
+    font-weight: bold;
+    color: #229555;
+  }
+  
+  ion-item p {
+    color: #666;
+  }
+  
+  /* Efecto hover en las cards */
+  ion-card {
+    transition: transform 0.3s ease;
+  }
+  
+  ion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  

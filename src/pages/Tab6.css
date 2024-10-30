@@ -1,0 +1,186 @@
+
+.profile-card {
+  margin: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: block;
+  object-fit: cover;
+  border: 3px solid var(--ion-color-primary);
+}
+
+.bio {
+  text-align: center;
+  color: #666;
+  line-height: 1.6;
+  padding: 0 20px;
+  margin: 15px 0;
+}
+
+.contact-card {
+  margin: 20px;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.contact-buttons ion-button {
+  min-width: 140px;
+}
+
+ion-card-title {
+  font-size: 1.5em;
+  color: var(--ion-color-primary);
+  font-weight: bold;
+  text-align: center;
+}
+
+ion-card-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1em;
+}
+
+ion-item {
+  --background: transparent;
+  margin: 10px 0;
+}
+
+ion-item h3 {
+  font-weight: bold;
+  color: var(--ion-color-primary);
+  font-size: 1.1em;
+}
+
+ion-item p {
+  color: #666;
+  margin-top: 5px;
+}
+
+.skills-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.skills-list li {
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+}
+
+/* Efectos hover para los botones */
+ion-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Animación para las cards */
+ion-card {
+  animation: fadeIn 0.5s ease-in;
+  transition: transform 0.3s ease;
+}
+
+ion-card:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contact-buttons ion-button {
+    min-width: 120px;
+  }
+
+  ion-card-title {
+    font-size: 1.3em;
+  }
+
+  ion-card-subtitle {
+    font-size: 1em;
+  }
+}
+
+/* Estilo para el modo oscuro */
+@media (prefers-color-scheme: dark) {
+  ion-card {
+    --background: rgba(255, 255, 255, 0.95);
+  }
+
+  ion-item {
+    --background: transparent;
+  }
+
+  ion-card-title {
+    color: var(--ion-color-primary);
+  }
+
+  ion-item h3 {
+    color: var(--ion-color-primary);
+  }
+
+  ion-item p {
+    color: #666;
+  }
+}
+
+/* Estilos adicionales para mejorar la accesibilidad */
+.contact-buttons ion-button {
+  --padding-start: 15px;
+  --padding-end: 15px;
+  font-weight: 500;
+}
+
+.profile-card ion-card-content {
+  padding-bottom: 20px;
+}
+
+/* Estilo para los iconos en los botones */
+.contact-buttons ion-icon {
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+/* Estilo para las secciones de habilidades y educación */
+ion-list {
+  background: transparent;
+}
+
+ion-item:last-child {
+  --border-style: none;
+}
+
+/* Efecto de hover para las cards de proyectos */
+ion-card.project-card:hover {
+  border-color: var(--ion-color-primary);
+  cursor: pointer;
+}

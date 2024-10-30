@@ -1,0 +1,314 @@
+.tab2-content {
+    --background: radial-gradient(circle, rgba(223,241,244,1) 7%, rgba(74,189,219,1) 88%);
+
+}
+
+.tab2-content {
+    --padding-start: 16px;
+    --padding-end: 16px;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.character-card {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.character-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    width: 100%; /* Asegura que tome todo el ancho disponible */
+    margin: 0 auto; /* Centra la tarjeta */
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+}
+
+.character-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.character-card ion-card-header {
+    padding: 15px;
+}
+
+.character-card ion-card-title {
+    font-family: 'GleeFont', sans-serif;
+    font-size: 1.5em;
+    color: #229555;
+}
+
+.character-card ion-card-subtitle {
+    color: #64d396;
+}
+
+.character-detail {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.detail-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.detail-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.character-description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
+    margin: 20px 0;
+    padding: 0 15px;
+}
+
+.detail-section {
+    margin: 25px 0;
+    padding: 0 15px;
+}
+
+.detail-section h3 {
+    color: #229555;
+    font-family: 'GleeFont', sans-serif;
+    margin-bottom: 10px;
+}
+
+.detail-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detail-section li {
+    margin: 10px 0;
+    color: #666;
+    line-height: 1.4;
+}
+
+.traits-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.trait-badge {
+    background: #64d396;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.back-button {
+    margin: 20px 15px;
+}
+
+/* Animaciones */
+.character-card {
+    animation: fadeIn 0.5s ease-in;
+}
+
+.detail-card {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .character-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .character-img {
+        height: 250px;
+    }
+
+    .detail-img {
+        height: 300px;
+    }
+
+    .character-description {
+        font-size: 1em;
+    }
+
+    .trait-badge {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    .detail-section h3 {
+        font-size: 1.2em;
+    }
+
+    .detail-section li {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .character-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .character-img {
+        height: 250px;
+    }
+
+    .detail-img {
+        height: 300px;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .character-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .character-card {
+        margin-bottom: 15px;
+    }
+
+    .character-img {
+        height: 200px;
+    }
+
+    .detail-img {
+        height: 250px;
+    }
+
+    .character-card ion-card-title {
+        font-size: 1.3em;
+    }
+
+    .character-description {
+        font-size: 0.9em;
+        padding: 0 10px;
+    }
+
+    .detail-section {
+        margin: 15px 0;
+        padding: 0 10px;
+    }
+
+    .traits-container {
+        gap: 8px;
+    }
+}
+
+/* Estilos para el modo oscuro */
+@media (prefers-color-scheme: dark) {
+    .character-card,
+    .detail-card {
+        background: rgba(255, 255, 255, 0.98);
+    }
+
+    .character-card ion-card-title,
+    .detail-section h3 {
+        color: #229555;
+    }
+
+    .character-description,
+    .detail-section li {
+        color: #333;
+    }
+
+    .trait-badge {
+        background: #229555;
+    }
+}
+
+/* Efectos de hover mejorados */
+.character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.trait-badge:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+}
+
+.back-button:hover {
+    --background: #1a7443;
+    transition: --background 0.3s ease;
+}
+
+/* Estilos adicionales para mejorar la accesibilidad */
+.character-card:focus,
+.back-button:focus {
+    outline: 3px solid #229555;
+    outline-offset: 3px;
+}
+
+.detail-section ul li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.detail-section ul li::before {
+    content: '•';
+    color: #229555;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Ajustes para la animación de carga */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
