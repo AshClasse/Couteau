@@ -9,9 +9,6 @@ const Tab4: React.FC = () => {
         <IonToolbar>
           <IonTitle>acerca de glee📖</IonTitle>
           <IonButtons slot="end">
-            <IonButton href='/mini-juego'>
-                <IonIcon icon={ gameControllerOutline } />
-            </IonButton>
             <IonButton href='/contratame'>
               <IonIcon icon={ personOutline } />
             </IonButton>

@@ -15,7 +15,7 @@
   }
   
   .game-header h2 {
-    font-family: 'GleeFont', sans-serif;
+    font-family: 'AfacadFont', sans-serif;
     color: white;
     font-size: 2em;
     margin-bottom: 10px;
@@ -98,7 +98,7 @@
   
   .character-name {
     margin-top: 10px;
-    font-family: 'GleeFont', sans-serif;
+    font-family: 'AfacadFont', sans-serif;
     color: #229555;
     font-size: 1.1em;
     text-align: center;
@@ -120,7 +120,7 @@
   
   .win-message h2 {
     color: #229555;
-    font-family: 'GleeFont', sans-serif;
+    font-family: 'AfacadFont', sans-serif;
     margin-bottom: 15px;
   }
   

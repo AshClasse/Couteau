@@ -7,19 +7,16 @@ const Tab6: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>contrátame💵</IonTitle>
+          <IonTitle>Contrátame💵</IonTitle>
 
           <IonButtons slot="end">
-            <IonButton href='/mini-juego'>
-                <IonIcon icon={ gameControllerOutline } />
-            </IonButton>
             <IonButton href='/contratame'>
               <IonIcon icon={ personOutline } />
             </IonButton>
           </IonButtons>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen className='tab-content'>
+      <IonContent fullscreen className='tab6-content'>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">contrátame</IonTitle>

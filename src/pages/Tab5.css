@@ -1,10 +1,6 @@
 .tab5-content {
     --background: radial-gradient(circle, rgba(244,210,217,1) 5%, rgba(246,0,61,1) 88%);
 }
-
-.tab5-content {
-    --background: radial-gradient(circle, rgba(244,210,217,1) 5%, rgba(246,0,61,1) 88%);
-  }
   
   ion-card {
     margin: 10px, 20px;
@@ -17,7 +13,7 @@
   }
   
   ion-card-title {
-    font-family: 'GleeFont', sans-serif;
+    font-family: 'AfacadFont', sans-serif;
     font-size: 1.5em;
     font-weight: bold;
   }

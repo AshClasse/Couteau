@@ -1,4 +1,8 @@
 
+.tab6-content {
+  --background: #f6e5ee;
+}
+
 .profile-card {
   margin: 20px;
   border-radius: 15px;

@@ -10,9 +10,6 @@ const Tab5: React.FC = () => {
           <IonTitle>glee en mi vida💁🏾‍♀️</IonTitle>
 
           <IonButtons slot="end">
-            <IonButton href='/mini-juego'>
-                <IonIcon icon={ gameControllerOutline } />
-            </IonButton>
             <IonButton href='/contratame'>
               <IonIcon icon={ personOutline } />
             </IonButton>

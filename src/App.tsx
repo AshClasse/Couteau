@@ -10,15 +10,14 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { accessibility, call, ellipse, heartHalf, home, images, informationCircle, square, triangle } from 'ionicons/icons';
+import { accessibility, call, ellipse, heartHalf, home, hourglass, images, informationCircle, logoWordpress, maleFemale, rainy, school, square, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
 import Tab4 from './pages/Tab4';
 import Tab5 from './pages/Tab5';
 import Tab6 from './pages/Tab6';
-
-
+import Tab7 from './pages/Tab7';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -41,7 +40,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import './theme/custom-fonts.css';
 import './theme/floating-tab-bar.css';
-import Tab7 from './pages/Tab7';
+
 
 setupIonicReact();
 
@@ -53,22 +52,22 @@ const App: React.FC = () => (
           <Route exact path="/inicio">
             <Tab1 />
           </Route>
-          <Route exact path="/personajes">
+          <Route exact path="/genero">
             <Tab2 />
           </Route>
-          <Route exact path="/momentos">
+          <Route exact path="/edad">
             <Tab3 />
           </Route>
-          <Route exact path="/acerca">
+          <Route exact path="/universidad">
             <Tab4 />
           </Route>
-          <Route exact path="/enmivida">
+          <Route exact path="/clima">
             <Tab5 />
           </Route>
           <Route exact path="/contratame">
             <Tab6 />
           </Route>
-          <Route exact path="/mini-juego">
+          <Route exact path="/wordpress">
             <Tab7 />
           </Route>
           <Route exact path="/">
@@ -79,17 +78,20 @@ const App: React.FC = () => (
           <IonTabButton tab="tab1" href="/inicio">
             <IonIcon aria-hidden="true" icon={home}/>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/personajes">
-            <IonIcon aria-hidden="true" icon={accessibility} />
+          <IonTabButton tab="tab2" href="/genero">
+            <IonIcon aria-hidden="true" icon={maleFemale} />
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/momentos">
-            <IonIcon aria-hidden="true" icon={images} />
+          <IonTabButton tab="tab3" href="/edad">
+            <IonIcon aria-hidden="true" icon={hourglass} />
           </IonTabButton>
-          <IonTabButton tab="tab4" href="/acerca">
-            <IonIcon aria-hidden="true" icon={informationCircle} />
+          <IonTabButton tab="tab4" href="/universidad">
+            <IonIcon aria-hidden="true" icon={school} />
           </IonTabButton>
-          <IonTabButton tab="tab5" href="/enmivida">
-            <IonIcon aria-hidden="true" icon={heartHalf} />
+          <IonTabButton tab="tab5" href="/clima">
+            <IonIcon aria-hidden="true" icon={rainy} />
+          </IonTabButton>
+          <IonTabButton tab="tab7" href="/wordpress">
+            <IonIcon aria-hidden="true" icon={logoWordpress} />
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

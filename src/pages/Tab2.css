@@ -48,7 +48,7 @@
 }
 
 .character-card ion-card-title {
-    font-family: 'GleeFont', sans-serif;
+    font-family: 'AfacadFont', sans-serif;
     font-size: 1.5em;
     color: #229555;
 }
@@ -89,7 +89,7 @@
 
 .detail-section h3 {
     color: #229555;
-    font-family: 'GleeFont', sans-serif;
+    font-family: 'AfacadFont', sans-serif;
     margin-bottom: 10px;
 }
 

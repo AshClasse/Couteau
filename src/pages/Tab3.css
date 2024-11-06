@@ -76,7 +76,7 @@
 }
 
 .detail-card ion-card-title {
-    font-family: 'GleeFont', sans-serif;
+    font-family: 'AfacadFont', sans-serif;
     font-size: 1.5em;
     color: var(--ion-color-primary);
 }
@@ -238,7 +238,7 @@
 
 .hero-overlay h1 {
     color: white;
-    font-family: 'GleeFont', sans-serif;
+    font-family: 'AfacadFont', sans-serif;
     font-size: 2.5em;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
